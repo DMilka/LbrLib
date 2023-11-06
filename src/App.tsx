@@ -1,9 +1,11 @@
 import React from 'react';
+import {ThemeComponentPlayground} from "./ThemeComponentPlayground";
+import Theme from "./library/theme/Theme";
 function App() {
   return (
-    <div>
-
-    </div>
+      <Theme>
+          <ThemeComponentPlayground/>
+      </Theme>
   );
 }
 
