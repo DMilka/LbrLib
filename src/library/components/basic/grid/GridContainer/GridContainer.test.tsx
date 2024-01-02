@@ -81,4 +81,28 @@ describe('GridContainer component', (): void => {
             expect(componentStyle.getPropertyValue('align-items')).toBe('center');
         }
     });
+
+    it('should set spacing default to 0 when no spacing prop passed', (): void => {
+        const {container} = render(
+            <GridContainer>
+                <div>First</div>
+            </GridContainer>
+        );
+
+        const gridContainer = container.querySelector('.MuiGrid-spacing');
+
+        expect(gridContainer).not.toBeInTheDocument();
+    })
+
+    it('should set spacing when spacing prop passed', (): void => {
+        const {container} = render(
+            <GridContainer spacing={2}>
+                <div>First</div>
+            </GridContainer>
+        );
+
+        const gridContainer = container.querySelector('.MuiGrid-spacing-xs-2');
+
+        expect(gridContainer).toBeInTheDocument();
+    })
 })
