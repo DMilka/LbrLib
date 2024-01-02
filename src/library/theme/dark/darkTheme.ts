@@ -11,7 +11,7 @@ import {
 
 export const darkTheme = createTheme({
     typography: {
-        fontFamily: "'Lato', 'Montserrat', 'Roboto', 'Helvetica, 'Arial'"
+        fontFamily: "\"Lato\", \"Montserrat\", \"Roboto\", \"Helvetica\", \"Arial\""
     },
     palette: {
         mode: 'dark',
